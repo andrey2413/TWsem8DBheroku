@@ -9,6 +9,37 @@ var sequelizeConnection = new Sequelize(
   sequelizeConfigProps
 );
 
+
+dotenv.config();
+
+// const sequelizeConnection = new Sequelize(
+//     "herokudb",
+//     "postgres",
+//     "server1234",
+//     sequalizeConfigProps
+// );
+
+let config
+if (process.env.NODE_ENV == 'production') {
+    config = {
+        logging: false,
+        ssl: true,
+        dialectOptions: {
+            ssl: {
+                require: true,
+                rejectUnauthorized: false
+            }
+        }
+    }
+} else {
+    config = {
+        logging: true
+    }
+}
+
+const sequelizeConnection = new Sequelize(process.env.DATABASE_URL, config);
+
+
 // ---------- 1:N ---------- //
 
 export var Orders = sequelizeConnection.define("Orders", {
