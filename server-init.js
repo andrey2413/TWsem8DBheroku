@@ -18,9 +18,6 @@ server.listen(port, function afterServerStart() {
   console.log(`Server is running on port ${port}...`);
 });
 
-server.listen(process.env.PORT, function afterServerStart() {
-  console.log(`Server is running on port ${process.env.PORT}..`);
-});
 
 
 export { server, router };
