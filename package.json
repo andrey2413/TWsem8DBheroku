@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./sequelize/api.js"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,6 +16,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mariadb": "^2.5.5",
+    "pg": "^8.7.1",
     "sequelize": "^6.9.0",
     "sqlite3": "^5.0.2"
   }

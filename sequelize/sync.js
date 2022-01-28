@@ -1,13 +1,14 @@
 import { Sequelize } from "sequelize";
 import { sequelizeConfigProps } from "../config.js";
 import { sequelizeOperationsAPI } from "./operations-api.js";
+import dotenv from "dotenv";
 
-var sequelizeConnection = new Sequelize(
-  "seminar_instance",
-  "root",
-  "test1234",
-  sequelizeConfigProps
-);
+// var sequelizeConnection = new Sequelize(
+//   "seminar_instance",
+//   "root",
+//   "test1234",
+//   sequelizeConfigProps
+// );
 
 
 dotenv.config();
